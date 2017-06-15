@@ -16,5 +16,16 @@
     "background":{
         "scripts":["eventPage.js"],
         "persistence": false
-    } 
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://developer.chrome.com/*"],
+            "js": ["content.js", "jquery-3.2.1.min.js"],
+            "css": ["content.css"]
+        }
+    ],
+    "permissions":[
+        "tabs",
+        "https://developer.chrome.com/*"
+    ]
 }
